@@ -371,6 +371,10 @@
                         next.style.display="block";
                         localStorage.setItem("easy", "1");
                         }
+                        else if(shot < 15||localStorage.getItem("easy")!=1){
+                            $('.img1').first().fadeIn(1000, function(){
+                            });
+                        }
                     }
                     else if(now==2){
                         if(shot >= 15||localStorage.getItem("normal")==1){
@@ -379,6 +383,10 @@
                         var next=document.getElementById("next");
                         next.style.display="block";
                         localStorage.setItem("noraml", "1");
+                        }
+                        else if(shot < 15||localStorage.getItem("normal")!=1){
+                            $('.img1').first().fadeIn(1000, function(){
+                            });
                         }
                     }
                     else if(now==3){
@@ -389,11 +397,15 @@
                         next.style.display="block";
                         localStorage.setItem("hard", "1");
                         }
+                        else if(shot < 15||localStorage.getItem("hard")!=1){
+                            $('.img1').first().fadeIn(1000, function(){
+                            });
+                        }
                     }
                     else{
-                        $('.img1').first().fadeIn(1000, function(){
                         
-                        });
+                            $('.img1').first().fadeIn(1000, function(){
+                            });
                     }
                     var reload1=document.getElementById("start2");
                     reload1.style.display="block";
